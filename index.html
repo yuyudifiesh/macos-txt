@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>记事本</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="notepad-window">
+        <!-- 标题栏 -->
+        <div class="title-bar">
+            <div class="window-title">记事本</div>
+            <div class="window-controls">
+                <button class="window-btn minimize-btn">─</button>
+                <button class="window-btn maximize-btn">□</button>
+                <button class="window-btn close-btn">✕</button>
+            </div>
+        </div>
+
+        <!-- 菜单栏 -->
+        <div class="menu-bar">
+            <div class="menu-item" id="fileMenu">文件(F)
+                <div class="dropdown-menu" id="fileDropdown">
+                    <div class="dropdown-item" data-action="new">新建(N)　　　Ctrl+N</div>
+                    <div class="dropdown-item" data-action="open">打开(O)...　　Ctrl+O</div>
+                    <div class="dropdown-item" data-action="save">保存(S)　　　Ctrl+S</div>
+                    <div class="dropdown-item" data-action="saveAs">另存为(A)...　Ctrl+Shift+S</div>
+                    <div class="dropdown-separator"></div>
+                    <div class="dropdown-item disabled" data-action="pageSetup">页面设置(U)...</div>
+                    <div class="dropdown-item disabled" data-action="print">打印(P)...　　Ctrl+P</div>
+                    <div class="dropdown-separator"></div>
+                    <div class="dropdown-item" data-action="exit">退出(X)</div>
+                </div>
+            </div>
+            <div class="menu-item">编辑(E)</div>
+            <div class="menu-item">格式(O)</div>
+            <div class="menu-item">查看(V)</div>
+            <div class="menu-item">帮助(H)</div>
+        </div>
+
+        <!-- 行号 -->
+        <div class="editor-container">
+            <div class="line-numbers" id="lineNumbers">1</div>
+            <textarea class="editor-area" id="editor" placeholder="在此处输入文本..."></textarea>
+        </div>
+
+        <!-- 状态栏 -->
+        <div class="status-bar" id="statusBar">第 1 行，第 1 列 100% Windows (CRLF) UTF-8</div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
